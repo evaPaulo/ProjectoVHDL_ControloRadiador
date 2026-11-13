@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity PulseEnable is
 	generic(contagem 	: natural := 20);
-	port(clkIn	: in std_logic;
+	port(clkIn		: in std_logic;
 		  enable	: in std_logic;
 		  clkOut	: out std_logic);
 end PulseEnable;
