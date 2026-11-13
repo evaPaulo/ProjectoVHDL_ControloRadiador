@@ -4,9 +4,9 @@ use ieee.std_logic_1164.all;
 entity RelogioBasico is
 
 port (clk, pulso, modo	: in std_logic;
-		upD, enM, enH		: in std_logic;
-		minOut				: out std_logic_vector(5 downto 0);
-		horOut				: out std_logic_vector(4 downto 0));
+		upD, enM, enH	: in std_logic;
+		minOut			: out std_logic_vector(5 downto 0);
+		horOut			: out std_logic_vector(4 downto 0));
 end RelogioBasico;
 
 architecture compRelogioBasico of RelogioBasico is
