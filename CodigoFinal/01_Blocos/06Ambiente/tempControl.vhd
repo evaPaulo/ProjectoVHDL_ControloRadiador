@@ -15,7 +15,7 @@ signal s_maxVal, s_minVal, s_Ref, s_Count : integer;
 begin
 	
 	
-	s_Ref		<= to_integer (unsigned (tRef));
+	s_Ref	<= to_integer (unsigned (tRef));
 	s_Count	<= to_integer (unsigned (tAtual));
 	s_minVal <= s_Ref - 20;
 	s_maxVal <= s_Ref + 20;

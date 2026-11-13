@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 entity Conv7Rel is
 
 	port (enMM			: in std_logic;
-			enHH			: in std_logic;
+			enHH		: in std_logic;
 			inPort3  	: in std_logic_vector(3 downto 0);
 			inPort2  	: in std_logic_vector(3 downto 0);
 			inPort1  	: in std_logic_vector(3 downto 0);

@@ -8,9 +8,9 @@ entity Conv7Amb is
 			inPort1  	: in std_logic_vector(3 downto 0);
 			inPort0  	: in std_logic_vector(3 downto 0);
 	
-			outPort2		: out std_logic_vector(6 downto 0);
-			outPort1		: out std_logic_vector(6 downto 0);
-			outPort0		: out std_logic_vector(6 downto 0));
+			outPort2	: out std_logic_vector(6 downto 0);
+			outPort1	: out std_logic_vector(6 downto 0);
+			outPort0	: out std_logic_vector(6 downto 0));
 			
 end Conv7Amb;
 
