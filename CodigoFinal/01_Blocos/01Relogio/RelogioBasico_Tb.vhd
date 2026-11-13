@@ -13,14 +13,14 @@ signal s_horOut: std_logic_vector(4 downto 0);
 begin 
 
 uut: entity work.RelogioBasico(compRelogioBasico)
-	port map(clk=>s_clk,
-				pulso	=> s_pulso,
-				modo	=> s_modo,
-				upD		=> s_upD,
-				enM		=> s_enM,
-				enH		=> s_enH,
-				minOut	=> s_minOut,
-				horOut	=> s_horOut);
+	port map(clk	=> s_clk,
+			pulso	=> s_pulso,
+			modo	=> s_modo,
+			upD		=> s_upD,
+			enM		=> s_enM,
+			enH		=> s_enH,
+			minOut	=> s_minOut,
+			horOut	=> s_horOut);
 					
 				
 clock_process:process
