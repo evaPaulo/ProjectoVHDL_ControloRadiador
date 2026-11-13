@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.all;
 entity DivFreq is
 	generic(contagem 	: natural := 20);
 	port(clkIn	: in  std_logic;
-		  clkOut	: out std_logic);
+		clkOut	: out std_logic);
 end DivFreq;
 
 architecture compDivFreq of DivFreq is
