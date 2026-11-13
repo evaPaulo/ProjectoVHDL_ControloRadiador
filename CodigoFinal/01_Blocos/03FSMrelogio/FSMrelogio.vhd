@@ -3,10 +3,10 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity FSMrelogio is 
 	port(clk             : in std_logic;
-		  up, down        : in std_logic;
-		  tecla				: in std_logic;
-		  modo,ud,mmH		: out std_logic;
-		  enH,enM 			: out std_logic);
+		  up, down       : in std_logic;
+		  tecla			 : in std_logic;
+		  modo,ud,mmH	 : out std_logic;
+		  enH,enM 		 : out std_logic);
 end FSMrelogio;
 
 architecture compFSMrelogio of FSMrelogio is
@@ -18,7 +18,7 @@ begin
 	
 	sync_proc:process(clk)
 				 begin 
-					if(rising_edge(clk))then
+					if (rising_edge(clk)) then
 						pS <= nS;
 					end if;
 		
@@ -31,10 +31,10 @@ begin
 							
 							when NORMAL =>
 									modo	<= '0';
-									enH	<= '0';
-									enM	<= '0';
+									enH		<= '0';
+									enM		<= '0';
 									ud		<= '1';
-									mmH	<= '0';
+									mmH		<= '0';
 			
 								if (tecla = '1') then nS <= MINUTOS;
 													  else ns <= NORMAL;
@@ -43,10 +43,10 @@ begin
 							
 							when MINUTOS =>
 									modo	<= '1';
-									enH	<= '0';
-									enM	<= '0';
+									enH		<= '0';
+									enM		<= '0';
 									ud		<= '0';
-									mmH	<= '0';
+									mmH		<= '0';
 			
 								if (tecla = '1') then nS <=HORAS;
 													  else nS <=MINUTOS;
@@ -63,8 +63,8 @@ begin
 							
 							when HORAS =>
 									modo	<= '1';
-									enH	<= '0';
-									enM	<= '0';
+									enH		<= '0';
+									enM		<= '0';
 									ud		<= '0';
 									mmH 	<= '1';
 			
