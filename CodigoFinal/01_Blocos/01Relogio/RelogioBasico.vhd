@@ -18,26 +18,26 @@ begin
 	
 	muxMin:	entity work.mux2_1Modo(compMux2_1Modo)
 				port map (i0	=> pulso,
-							 i1	=> enM,
-							 sel	=> modo,
-							 yOut	=> s_minMux);
+						  i1	=> enM,
+						  sel	=> modo,
+						 yOut	=> s_minMux);
 							 
 	Minutos:	entity work.Minuto(compMinuto)
 				port map (clk		=> clk,
-							 enL		=> s_minMux,
-							 upD		=> upD,
-							 minOut	=> minOut,
-							 contFim	=> s_contFim);
+						  enL		=> s_minMux,
+						  upD		=> upD,
+						  minOut	=> minOut,
+						 contFim	=> s_contFim);
 							 
 	muxHrs:	entity work.mux2_1Modo(compMux2_1Modo)
 				port map (i0	=> (pulso and s_contFim),
-							 i1	=> enH,
-							 sel	=> modo,
-							 yOut	=> s_horMux);
+						  i1	=> enH,
+						 sel	=> modo,
+						 yOut	=> s_horMux);
 	
 	Horas:	entity work.Hora(compHora)
 				port map (clk		=> clk,
-							 enL		=> s_horMux,
-							 upD		=> upD,
-							 horaOut	=> horOut);
+						 enL		=> s_horMux,
+						 upD		=> upD,
+						 horaOut	=> horOut);
 end compRelogioBasico;							 
