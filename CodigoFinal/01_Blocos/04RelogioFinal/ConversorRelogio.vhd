@@ -25,24 +25,24 @@ begin
 								 i2(1)	=> pulseIn,
 								 sel(0)	=> mmH,
 								 sel(1)	=>	modo,
-								 Yout(0)	=> s_enM,
-								 Yout(1)	=> s_enH);
+								 Yout(0)=> s_enM,
+								 Yout(1)=> s_enH);
 		
 		conv2D:	entity work.Conversor2Dig(compConversor2Dig)
 					port map (minIn	=> minuIn,
 								 horaIn	=> horaIn,
-								 horaDez	=> s_hhD,
-								 horaUnd	=> s_hhU,
+								 horaDez=> s_hhD,
+								 horaUnd=> s_hhU,
 								 minDez	=> s_mmD,
 								 minUnd	=> s_mmU);
 								 
 		convHx:	entity work.Conv7Rel(compConv7Rel)
 					port map (enMM			=> s_enM,
-								 enHH			=> s_enH,
-								 inPort0		=> s_mmU,
-								 inPort1		=> s_mmD,
-								 inPort2		=> s_hhU,
-								 inPort3		=> s_hhD,
+								 enHH		=> s_enH,
+								 inPort0	=> s_mmU,
+								 inPort1	=> s_mmD,
+								 inPort2	=> s_hhU,
+								 inPort3	=> s_hhD,
 								 outPort0	=> minuU,
 								 outPort1	=> minuD,
 								 outPort2	=> horaU,
