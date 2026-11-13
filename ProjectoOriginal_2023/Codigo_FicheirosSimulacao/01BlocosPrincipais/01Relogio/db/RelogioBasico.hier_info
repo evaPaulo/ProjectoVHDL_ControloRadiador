@@ -1,0 +1,92 @@
+|RelogioBasico
+clk => minuto:Minutos.clk
+clk => hora:Horas.clk
+pulso => comb.IN1
+pulso => mux2_1modo:muxMin.i0
+modo => mux2_1modo:muxMin.sel
+modo => mux2_1modo:muxHrs.sel
+upD => minuto:Minutos.upD
+upD => hora:Horas.upD
+enM => mux2_1modo:muxMin.i1
+enH => mux2_1modo:muxHrs.i1
+minOut[0] <= minuto:Minutos.minOut[0]
+minOut[1] <= minuto:Minutos.minOut[1]
+minOut[2] <= minuto:Minutos.minOut[2]
+minOut[3] <= minuto:Minutos.minOut[3]
+minOut[4] <= minuto:Minutos.minOut[4]
+minOut[5] <= minuto:Minutos.minOut[5]
+horOut[0] <= hora:Horas.horaOut[0]
+horOut[1] <= hora:Horas.horaOut[1]
+horOut[2] <= hora:Horas.horaOut[2]
+horOut[3] <= hora:Horas.horaOut[3]
+horOut[4] <= hora:Horas.horaOut[4]
+
+
+|RelogioBasico|mux2_1Modo:muxMin
+i0 => yout.DATAA
+i1 => yout.DATAB
+sel => yout.OUTPUTSELECT
+yout <= yout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RelogioBasico|Minuto:Minutos
+clk => contFim~reg0.CLK
+clk => s_cont[0].CLK
+clk => s_cont[1].CLK
+clk => s_cont[2].CLK
+clk => s_cont[3].CLK
+clk => s_cont[4].CLK
+clk => s_cont[5].CLK
+enL => s_cont[0].ENA
+enL => contFim~reg0.ENA
+enL => s_cont[1].ENA
+enL => s_cont[2].ENA
+enL => s_cont[3].ENA
+enL => s_cont[4].ENA
+enL => s_cont[5].ENA
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => contFim.OUTPUTSELECT
+minOut[0] <= s_cont[0].DB_MAX_OUTPUT_PORT_TYPE
+minOut[1] <= s_cont[1].DB_MAX_OUTPUT_PORT_TYPE
+minOut[2] <= s_cont[2].DB_MAX_OUTPUT_PORT_TYPE
+minOut[3] <= s_cont[3].DB_MAX_OUTPUT_PORT_TYPE
+minOut[4] <= s_cont[4].DB_MAX_OUTPUT_PORT_TYPE
+minOut[5] <= s_cont[5].DB_MAX_OUTPUT_PORT_TYPE
+contFim <= contFim~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RelogioBasico|mux2_1Modo:muxHrs
+i0 => yout.DATAA
+i1 => yout.DATAB
+sel => yout.OUTPUTSELECT
+yout <= yout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RelogioBasico|Hora:Horas
+clk => s_cont[0].CLK
+clk => s_cont[1].CLK
+clk => s_cont[2].CLK
+clk => s_cont[3].CLK
+clk => s_cont[4].CLK
+enL => s_cont[0].ENA
+enL => s_cont[1].ENA
+enL => s_cont[2].ENA
+enL => s_cont[3].ENA
+enL => s_cont[4].ENA
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+upD => s_cont.OUTPUTSELECT
+horaOut[0] <= s_cont[0].DB_MAX_OUTPUT_PORT_TYPE
+horaOut[1] <= s_cont[1].DB_MAX_OUTPUT_PORT_TYPE
+horaOut[2] <= s_cont[2].DB_MAX_OUTPUT_PORT_TYPE
+horaOut[3] <= s_cont[3].DB_MAX_OUTPUT_PORT_TYPE
+horaOut[4] <= s_cont[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

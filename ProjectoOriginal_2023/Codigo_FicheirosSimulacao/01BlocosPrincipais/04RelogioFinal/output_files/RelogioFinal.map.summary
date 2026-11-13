@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jun 01 10:58:03 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : RelogioFinal
+Top-level Entity Name : RelogioFinal
+Family : Cyclone IV E
+Total logic elements : 266
+    Total combinational functions : 265
+    Dedicated logic registers : 15
+Total registers : 15
+Total pins : 39
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

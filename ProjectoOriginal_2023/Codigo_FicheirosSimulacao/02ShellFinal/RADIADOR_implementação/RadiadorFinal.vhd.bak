@@ -1,0 +1,44 @@
+--library IEEE;
+--use IEEE.STD_LOGIC_1164.all;
+--
+--entity RadiadorFinal is
+--	
+--	port (clk, pulso, divF	: in std_logic;
+--			tUp, tDw, tS, tP	: in std_logic;
+--			acel					: in std_logic_vector(1 downto 0);
+--			
+--			LedG, LedL, LedS	: out std_logic;
+--			gDzn, gUni, gDcm	: out std_logic_vector(6 downto 0);
+--			hD, hU, mD, mU		: out std_logic_vector(6 downto 0));
+--			
+--end RadiadorFinal;
+--
+--architecture compRadiadorFinal of RadiadorFinal is
+--
+--signal s_divF, s_pulso		: std_logic;
+--
+--signal s_hROM					: std_logic_vector(4 downto 0);
+--signal s_tAtual
+--
+--begin
+--	
+--	Pulsos:		entity work.PulseGen(compPulseGen)
+--					port map(clockIn		=> clk,
+--								acel			=> acel,
+--								pulseHex		=> s_divF,
+--								pulseOut		=> s_pulso);
+--								
+--	Relogio:		entity work.RelogioFinal(compRelogioFinal)
+--					port map(clk		=> clk,
+--								pulso		=>	s_pulso,
+--								divF		=>	s_divF,
+--								up			=>	tUp,
+--								dw			=> tDw,
+--								tS			=> tS,
+--								horaRom	=>	s_hROM,
+--								hD			=>	hD,
+--								hU			=> hU,
+--								mD			=> mD,
+--								mU			=> mU);
+--								
+--	

@@ -1,0 +1,1268 @@
+Analysis & Synthesis report for RadiadorFinal
+Fri Jun 02 13:00:49 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS
+  9. State Machine - |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|FSMrelogio:FSMrel|pS
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaU
+ 16. Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaD
+ 17. Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaS
+ 18. Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaP
+ 19. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:Normal1
+ 20. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:Normal2
+ 21. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01
+ 22. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10
+ 23. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11
+ 24. Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2
+ 25. Parameter Settings for User Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Minuto:Minutos
+ 26. Parameter Settings for User Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Hora:Horas
+ 27. Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL
+ 28. Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA
+ 29. Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL
+ 30. Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|TempSala:cont9
+ 31. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0
+ 32. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1
+ 34. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1
+ 35. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1
+ 36. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0
+ 37. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1
+ 38. Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0
+ 39. Port Connectivity Checks: "RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux3_3:mux2"
+ 40. Port Connectivity Checks: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|mux2_1Modo:enableConv"
+ 41. Port Connectivity Checks: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|MuxHEXA:pulsos"
+ 42. Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11"
+ 43. Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10"
+ 44. Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 13:00:49 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; RadiadorFinal                               ;
+; Top-level Entity Name              ; RadiadorFinalTESTE                          ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,429                                       ;
+;     Total combinational functions  ; 1,422                                       ;
+;     Dedicated logic registers      ; 315                                         ;
+; Total registers                    ; 315                                         ;
+; Total pins                         ; 83                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; RadiadorFinalTESTE ; RadiadorFinal      ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; RelogioFinal.vhd                 ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd           ;         ;
+; RelogioBasico.vhd                ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd          ;         ;
+; MuxHEXA.vhd                      ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxHEXA.vhd                ;         ;
+; mux2_1Modo.vhd                   ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_1Modo.vhd             ;         ;
+; Minuto.vhd                       ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Minuto.vhd                 ;         ;
+; Hora.vhd                         ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Hora.vhd                   ;         ;
+; FSMrelogio.vhd                   ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMrelogio.vhd             ;         ;
+; ConversorRelogio.vhd             ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd       ;         ;
+; Conversor2Dig.vhd                ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd          ;         ;
+; compConv7Rel.vhd                 ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/compConv7Rel.vhd           ;         ;
+; PulseGen.vhd                     ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd               ;         ;
+; PulseEnable.vhd                  ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseEnable.vhd            ;         ;
+; Mux4.vhd                         ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4.vhd                   ;         ;
+; DivFreq.vhd                      ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DivFreq.vhd                ;         ;
+; tTodas.vhd                       ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd                 ;         ;
+; tSol.vhd                         ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tSol.vhd                   ;         ;
+; tLua.vhd                         ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tLua.vhd                   ;         ;
+; tGel.vhd                         ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tGel.vhd                   ;         ;
+; TempSala.vhd                     ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/TempSala.vhd               ;         ;
+; tempControl.vhd                  ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tempControl.vhd            ;         ;
+; outLEDS.vhd                      ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/outLEDS.vhd                ;         ;
+; MuxAMB.vhd                       ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxAMB.vhd                 ;         ;
+; Mux4AMB.vhd                      ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4AMB.vhd                ;         ;
+; mux3_3.vhd                       ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux3_3.vhd                 ;         ;
+; mux2_2.vhd                       ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_2.vhd                 ;         ;
+; FSMambiente.vhd                  ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd            ;         ;
+; ConversorAmbiente.vhd            ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd      ;         ;
+; ConvAmbiente.vhd                 ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd           ;         ;
+; Conv7Amb.vhd                     ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conv7Amb.vhd               ;         ;
+; AmbienteFinal.vhd                ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd          ;         ;
+; AmbienteBasico.vhd               ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd         ;         ;
+; romTemp.vhd                      ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/romTemp.vhd                ;         ;
+; DebounceUnit.vhd                 ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DebounceUnit.vhd           ;         ;
+; RadiadorFinal.vhd                ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd          ;         ;
+; RadiadorFinalTESTE.vhd           ; yes             ; User VHDL File               ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                  ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                 ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc             ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                  ;         ;
+; db/lpm_divide_lcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_lcm.tdf      ;         ;
+; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/sign_div_unsign_anh.tdf ;         ;
+; db/alt_u_div_8af.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_8af.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_p0p.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_p0p.tdf      ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/abs_divider_kbg.tdf     ;         ;
+; db/alt_u_div_67f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_67f.tdf       ;         ;
+; db/lpm_abs_2v9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_2v9.tdf         ;         ;
+; db/lpm_abs_i0a.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_i0a.tdf         ;         ;
+; db/lpm_divide_s0p.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_s0p.tdf      ;         ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/abs_divider_nbg.tdf     ;         ;
+; db/alt_u_div_c7f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_c7f.tdf       ;         ;
+; db/lpm_abs_5v9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_5v9.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 1,429          ;
+;                                             ;                ;
+; Total combinational functions               ; 1422           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 352            ;
+;     -- 3 input functions                    ; 286            ;
+;     -- <=2 input functions                  ; 784            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 862            ;
+;     -- arithmetic mode                      ; 560            ;
+;                                             ;                ;
+; Total registers                             ; 315            ;
+;     -- Dedicated logic registers            ; 315            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 83             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 315            ;
+; Total fan-out                               ; 4624           ;
+; Average fan-out                             ; 2.43           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                        ; Entity Name         ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |RadiadorFinalTESTE                                ; 1422 (0)            ; 315 (0)                   ; 0           ; 0            ; 0       ; 0         ; 83   ; 0            ; |RadiadorFinalTESTE                                                                                                                                                                                        ; RadiadorFinalTESTE  ; work         ;
+;    |RadiadorFinal:inst|                            ; 1422 (0)            ; 315 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst                                                                                                                                                                     ; RadiadorFinal       ; work         ;
+;       |AmbienteFinal:Ambiente|                     ; 632 (0)             ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente                                                                                                                                              ; AmbienteFinal       ; work         ;
+;          |AmbienteBasico:tSelect|                  ; 83 (0)              ; 10 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect                                                                                                                       ; AmbienteBasico      ; work         ;
+;             |MuxAMB:selecao|                       ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|MuxAMB:selecao                                                                                                        ; MuxAMB              ; work         ;
+;             |TempSala:cont9|                       ; 30 (30)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|TempSala:cont9                                                                                                        ; TempSala            ; work         ;
+;             |tempControl:control|                  ; 35 (35)             ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|tempControl:control                                                                                                   ; tempControl         ; work         ;
+;          |ConvAmbiente:conv|                       ; 502 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv                                                                                                                            ; ConvAmbiente        ; work         ;
+;             |Conv7Amb:conv7seg|                    ; 45 (45)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg                                                                                                          ; Conv7Amb            ; work         ;
+;             |ConversorAmbiente:conv3Dig|           ; 438 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig                                                                                                 ; ConversorAmbiente   ; work         ;
+;                |lpm_divide:Div0|                   ; 85 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;                   |lpm_divide_p0p:auto_generated|  ; 85 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0|lpm_divide_p0p:auto_generated                                                   ; lpm_divide_p0p      ; work         ;
+;                      |abs_divider_kbg:divider|     ; 85 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider                           ; abs_divider_kbg     ; work         ;
+;                         |alt_u_div_67f:divider|    ; 85 (85)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider|alt_u_div_67f:divider     ; alt_u_div_67f       ; work         ;
+;                |lpm_divide:Div1|                   ; 54 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;                   |lpm_divide_s0p:auto_generated|  ; 54 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1|lpm_divide_s0p:auto_generated                                                   ; lpm_divide_s0p      ; work         ;
+;                      |abs_divider_nbg:divider|     ; 54 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1|lpm_divide_s0p:auto_generated|abs_divider_nbg:divider                           ; abs_divider_nbg     ; work         ;
+;                         |alt_u_div_c7f:divider|    ; 54 (54)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1|lpm_divide_s0p:auto_generated|abs_divider_nbg:divider|alt_u_div_c7f:divider     ; alt_u_div_c7f       ; work         ;
+;                |lpm_divide:Mod0|                   ; 204 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;                   |lpm_divide_lcm:auto_generated|  ; 204 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0|lpm_divide_lcm:auto_generated                                                   ; lpm_divide_lcm      ; work         ;
+;                      |sign_div_unsign_anh:divider| ; 204 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                         |alt_u_div_8af:divider|    ; 204 (204)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider ; alt_u_div_8af       ; work         ;
+;                |lpm_divide:Mod1|                   ; 95 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;                   |lpm_divide_lcm:auto_generated|  ; 95 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated                                                   ; lpm_divide_lcm      ; work         ;
+;                      |sign_div_unsign_anh:divider| ; 95 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                       ; sign_div_unsign_anh ; work         ;
+;                         |alt_u_div_8af:divider|    ; 95 (95)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider ; alt_u_div_8af       ; work         ;
+;             |Mux4AMB:inRefConv|                    ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Mux4AMB:inRefConv                                                                                                          ; Mux4AMB             ; work         ;
+;             |mux2_1Modo:enableConv|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|mux2_1Modo:enableConv                                                                                                      ; mux2_1Modo          ; work         ;
+;          |FSMambiente:FSM|                         ; 9 (9)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM                                                                                                                              ; FSMambiente         ; work         ;
+;          |outLEDS:LEDs|                            ; 5 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs                                                                                                                                 ; outLEDS             ; work         ;
+;             |mux2_2:mux1|                          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux2_2:mux1                                                                                                                     ; mux2_2              ; work         ;
+;             |mux3_3:mux2|                          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux3_3:mux2                                                                                                                     ; mux3_3              ; work         ;
+;          |romTemp:ROM|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|romTemp:ROM                                                                                                                                  ; romTemp             ; work         ;
+;          |tTodas:tRef|                             ; 31 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef                                                                                                                                  ; tTodas              ; work         ;
+;             |tGel:GEL|                             ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL                                                                                                                         ; tGel                ; work         ;
+;             |tLua:LUA|                             ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA                                                                                                                         ; tLua                ; work         ;
+;             |tSol:SOL|                             ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL                                                                                                                         ; tSol                ; work         ;
+;       |DebounceUnit:teclaD|                        ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaD                                                                                                                                                 ; DebounceUnit        ; work         ;
+;       |DebounceUnit:teclaP|                        ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaP                                                                                                                                                 ; DebounceUnit        ; work         ;
+;       |DebounceUnit:teclaS|                        ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaS                                                                                                                                                 ; DebounceUnit        ; work         ;
+;       |DebounceUnit:teclaU|                        ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaU                                                                                                                                                 ; DebounceUnit        ; work         ;
+;       |PulseGen:Pulsos|                            ; 256 (1)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos                                                                                                                                                     ; PulseGen            ; work         ;
+;          |DivFreq:Normal1|                         ; 42 (42)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:Normal1                                                                                                                                     ; DivFreq             ; work         ;
+;          |DivFreq:saida2|                          ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2                                                                                                                                      ; DivFreq             ; work         ;
+;          |Mux4:saida1|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|Mux4:saida1                                                                                                                                         ; Mux4                ; work         ;
+;          |PulseEnable:Normal2|                     ; 53 (53)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:Normal2                                                                                                                                 ; PulseEnable         ; work         ;
+;          |PulseEnable:acel01|                      ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01                                                                                                                                  ; PulseEnable         ; work         ;
+;          |PulseEnable:acel10|                      ; 48 (48)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10                                                                                                                                  ; PulseEnable         ; work         ;
+;          |PulseEnable:acel11|                      ; 53 (53)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11                                                                                                                                  ; PulseEnable         ; work         ;
+;       |RelogioFinal:Relogio|                       ; 263 (0)             ; 15 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio                                                                                                                                                ; RelogioFinal        ; work         ;
+;          |ConversorRelogio:convRel|                ; 216 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel                                                                                                                       ; ConversorRelogio    ; work         ;
+;             |Conv7Rel:convHx|                      ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx                                                                                                       ; Conv7Rel            ; work         ;
+;             |Conversor2Dig:conv2D|                 ; 159 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D                                                                                                  ; Conversor2Dig       ; work         ;
+;                |lpm_divide:Div0|                   ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0                                                                                  ; lpm_divide          ; work         ;
+;                   |lpm_divide_p0p:auto_generated|  ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0|lpm_divide_p0p:auto_generated                                                    ; lpm_divide_p0p      ; work         ;
+;                      |abs_divider_kbg:divider|     ; 37 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider                            ; abs_divider_kbg     ; work         ;
+;                         |alt_u_div_67f:divider|    ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider|alt_u_div_67f:divider      ; alt_u_div_67f       ; work         ;
+;                |lpm_divide:Div1|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1                                                                                  ; lpm_divide          ; work         ;
+;                   |lpm_divide_p0p:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1|lpm_divide_p0p:auto_generated                                                    ; lpm_divide_p0p      ; work         ;
+;                      |abs_divider_kbg:divider|     ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider                            ; abs_divider_kbg     ; work         ;
+;                         |alt_u_div_67f:divider|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1|lpm_divide_p0p:auto_generated|abs_divider_kbg:divider|alt_u_div_67f:divider      ; alt_u_div_67f       ; work         ;
+;                |lpm_divide:Mod0|                   ; 67 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;                   |lpm_divide_lcm:auto_generated|  ; 67 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0|lpm_divide_lcm:auto_generated                                                    ; lpm_divide_lcm      ; work         ;
+;                      |sign_div_unsign_anh:divider| ; 67 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                        ; sign_div_unsign_anh ; work         ;
+;                         |alt_u_div_8af:divider|    ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider  ; alt_u_div_8af       ; work         ;
+;                |lpm_divide:Mod1|                   ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1                                                                                  ; lpm_divide          ; work         ;
+;                   |lpm_divide_lcm:auto_generated|  ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1|lpm_divide_lcm:auto_generated                                                    ; lpm_divide_lcm      ; work         ;
+;                      |sign_div_unsign_anh:divider| ; 34 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                        ; sign_div_unsign_anh ; work         ;
+;                         |alt_u_div_8af:divider|    ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider  ; alt_u_div_8af       ; work         ;
+;             |MuxHEXA:pulsos|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|MuxHEXA:pulsos                                                                                                        ; MuxHEXA             ; work         ;
+;          |FSMrelogio:FSMrel|                       ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|FSMrelogio:FSMrel                                                                                                                              ; FSMrelogio          ; work         ;
+;          |RelogioBasico:relBas|                    ; 44 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas                                                                                                                           ; RelogioBasico       ; work         ;
+;             |Hora:Horas|                           ; 17 (17)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Hora:Horas                                                                                                                ; Hora                ; work         ;
+;             |Minuto:Minutos|                       ; 23 (23)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Minuto:Minutos                                                                                                            ; Minuto              ; work         ;
+;             |mux2_1Modo:muxHrs|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|mux2_1Modo:muxHrs                                                                                                         ; mux2_1Modo          ; work         ;
+;             |mux2_1Modo:muxMin|                    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|mux2_1Modo:muxMin                                                                                                         ; mux2_1Modo          ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS ;
++-----------+--------+--------+--------+-----------------------------------------------------------+
+; Name      ; pS.SOL ; pS.LUA ; pS.GEL ; pS.NORMAL                                                 ;
++-----------+--------+--------+--------+-----------------------------------------------------------+
+; pS.NORMAL ; 0      ; 0      ; 0      ; 0                                                         ;
+; pS.GEL    ; 0      ; 0      ; 1      ; 1                                                         ;
+; pS.LUA    ; 0      ; 1      ; 0      ; 1                                                         ;
+; pS.SOL    ; 1      ; 0      ; 0      ; 1                                                         ;
++-----------+--------+--------+--------+-----------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------+
+; State Machine - |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|FSMrelogio:FSMrel|pS ;
++------------+----------+------------+-------------------------------------------------------------+
+; Name       ; pS.HORAS ; pS.MINUTOS ; pS.NORMAL                                                   ;
++------------+----------+------------+-------------------------------------------------------------+
+; pS.NORMAL  ; 0        ; 0          ; 0                                                           ;
+; pS.MINUTOS ; 0        ; 1          ; 1                                                           ;
+; pS.HORAS   ; 1        ; 0          ; 1                                                           ;
++------------+----------+------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                         ;
++--------------------------------------------------------------+---------------------------------------------------------------------+------------------------+
+; Latch Name                                                   ; Latch Enable Signal                                                 ; Free of Timing Hazards ;
++--------------------------------------------------------------+---------------------------------------------------------------------+------------------------+
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|ud ; RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|Selector5 ; yes                    ;
+; Number of user-specified and inferred latches = 1            ;                                                                     ;                        ;
++--------------------------------------------------------------+---------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                        ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+; Register name                                                            ; Reason for Removal                                                             ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL|s_cont[0] ; Stuck at GND due to stuck port data_in                                         ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA|s_cont[0] ; Stuck at GND due to stuck port data_in                                         ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL|s_cont[0] ; Stuck at GND due to stuck port data_in                                         ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[30]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[30] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[29]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[29] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[28]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[28] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[27]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[27] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[26]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[26] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[25]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[25] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[23]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[23] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[17]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[17] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[15]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[15] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[10]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[10] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[9]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[9]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[8]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[8]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[7]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[7]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[6]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[6]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[24]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[24] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[22]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[22] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[21]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[21] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[20]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[20] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[19]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[19] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[18]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[18] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[16]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[16] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[14]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[14] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[13]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[13] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[12]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[12] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[11]   ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[11] ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[5]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[5]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[4]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[4]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[3]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[3]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[2]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[2]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[1]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[1]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01|s_divCounter[0]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[0]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10|s_divCounter[0]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[0]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:Normal1|s_divCounter[0]       ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[0]  ;
+; RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10|s_divCounter[1]    ; Merged with RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2|s_divCounter[1]  ;
+; Total Number of Removed Registers = 37                                   ;                                                                                ;
++--------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 315   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 155   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                       ;
++--------------------------------------------------------------------------+---------+
+; Inverted Register                                                        ; Fan out ;
++--------------------------------------------------------------------------+---------+
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA|s_cont[7] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL|s_cont[7] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL|s_cont[6] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA|s_cont[5] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL|s_cont[5] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL|s_cont[3] ; 3       ;
+; RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL|s_cont[3] ; 3       ;
+; Total number of inverted registers = 7                                   ;         ;
++--------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Hora:Horas|s_cont[0]            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Minuto:Minutos|s_cont[4]        ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|TempSala:cont9|s_cont[4]    ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaP|s_debounceCnt[13]                                     ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaS|s_debounceCnt[13]                                     ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaU|s_debounceCnt[19]                                     ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |RadiadorFinalTESTE|RadiadorFinal:inst|DebounceUnit:teclaD|s_debounceCnt[20]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|MuxAMB:selecao|tRef[1]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Mux4AMB:inRefConv|tRef[8]        ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 10 LEs               ; 12 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort3[4] ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort0[6] ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort2[6] ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort2[4]    ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort0[4]    ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort1[6] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort0[3] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort1[3] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort2[5] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx|outPort3[3] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort2[5]    ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort1[4]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort1[5]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |RadiadorFinalTESTE|RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg|outPort0[5]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaU ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                             ;
+; msecmininwidth ; 100   ; Signed Integer                                             ;
+; inpolarity     ; '0'   ; Enumerated                                                 ;
+; outpolarity    ; '1'   ; Enumerated                                                 ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaD ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                             ;
+; msecmininwidth ; 100   ; Signed Integer                                             ;
+; inpolarity     ; '0'   ; Enumerated                                                 ;
+; outpolarity    ; '1'   ; Enumerated                                                 ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaS ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                             ;
+; msecmininwidth ; 100   ; Signed Integer                                             ;
+; inpolarity     ; '0'   ; Enumerated                                                 ;
+; outpolarity    ; '1'   ; Enumerated                                                 ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|DebounceUnit:teclaP ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                                             ;
+; msecmininwidth ; 100   ; Signed Integer                                             ;
+; inpolarity     ; '0'   ; Enumerated                                                 ;
+; outpolarity    ; '1'   ; Enumerated                                                 ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:Normal1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; contagem       ; 2     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:Normal2 ;
++----------------+------------+-----------------------------------------------------------------------+
+; Parameter Name ; Value      ; Type                                                                  ;
++----------------+------------+-----------------------------------------------------------------------+
+; contagem       ; 1500000000 ; Signed Integer                                                        ;
++----------------+------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01 ;
++----------------+----------+------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                   ;
++----------------+----------+------------------------------------------------------------------------+
+; contagem       ; 50000000 ; Signed Integer                                                         ;
++----------------+----------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10 ;
++----------------+---------+-------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                    ;
++----------------+---------+-------------------------------------------------------------------------+
+; contagem       ; 5000000 ; Signed Integer                                                          ;
++----------------+---------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11 ;
++----------------+--------+--------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                     ;
++----------------+--------+--------------------------------------------------------------------------+
+; contagem       ; 833333 ; Signed Integer                                                           ;
++----------------+--------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2 ;
++----------------+----------+--------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                               ;
++----------------+----------+--------------------------------------------------------------------+
+; contagem       ; 50000000 ; Signed Integer                                                     ;
++----------------+----------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Minuto:Minutos ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; contmax        ; 59    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Hora:Horas ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; contmax        ; 23    ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; contmax        ; 511   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; contmax        ; 511   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; contmax        ; 511   ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|TempSala:cont9 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; contmax        ; 511   ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                         ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                                                                                      ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_lcm ; Untyped                                                                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                               ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                         ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                                                      ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                                                      ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                                      ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                      ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_p0p ; Untyped                                                                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                               ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                         ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                                                                                      ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_lcm ; Untyped                                                                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                               ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                         ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                                                      ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                                                      ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                                      ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                      ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_p0p ; Untyped                                                                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                               ;
++------------------------+----------------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                          ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                                                       ;
+; LPM_WIDTHD             ; 8              ; Untyped                                                                                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_s0p ; Untyped                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                          ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                                                       ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                                                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_p0p ; Untyped                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                          ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                                                                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_lcm ; Untyped                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                                          ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                                                                                       ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_lcm ; Untyped                                                                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                                ;
++------------------------+----------------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux3_3:mux2" ;
++----------+-------+----------+------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                          ;
++----------+-------+----------+------------------------------------------------------------------+
+; i0[2..1] ; Input ; Info     ; Stuck at GND                                                     ;
+; i0[0]    ; Input ; Info     ; Stuck at VCC                                                     ;
+; i1[2]    ; Input ; Info     ; Stuck at GND                                                     ;
+; i1[1]    ; Input ; Info     ; Stuck at VCC                                                     ;
+; i1[0]    ; Input ; Info     ; Stuck at GND                                                     ;
+; i2[1..0] ; Input ; Info     ; Stuck at GND                                                     ;
+; i2[2]    ; Input ; Info     ; Stuck at VCC                                                     ;
++----------+-------+----------+------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|mux2_1Modo:enableConv" ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+; i0   ; Input ; Info     ; Stuck at VCC                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|MuxHEXA:pulsos" ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+; i0    ; Input ; Info     ; Stuck at VCC                                                                     ;
+; i1[1] ; Input ; Info     ; Stuck at VCC                                                                     ;
+; i2[0] ; Input ; Info     ; Stuck at VCC                                                                     ;
++-------+-------+----------+----------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11" ;
++--------+-------+----------+-------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                               ;
++--------+-------+----------+-------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                          ;
++--------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10" ;
++--------+-------+----------+-------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                               ;
++--------+-------+----------+-------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                          ;
++--------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01" ;
++--------+-------+----------+-------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                               ;
++--------+-------+----------+-------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                          ;
++--------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 83                          ;
+; cycloneiii_ff         ; 315                         ;
+;     ENA               ; 155                         ;
+;     plain             ; 160                         ;
+; cycloneiii_lcell_comb ; 1428                        ;
+;     arith             ; 560                         ;
+;         1 data inputs ; 39                          ;
+;         2 data inputs ; 334                         ;
+;         3 data inputs ; 187                         ;
+;     normal            ; 868                         ;
+;         0 data inputs ; 31                          ;
+;         1 data inputs ; 38                          ;
+;         2 data inputs ; 348                         ;
+;         3 data inputs ; 99                          ;
+;         4 data inputs ; 352                         ;
+;                       ;                             ;
+; Max LUT depth         ; 25.70                       ;
+; Average LUT depth     ; 10.29                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Jun 02 13:00:36 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RadiadorFinal -c RadiadorFinal
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file relogiofinal.vhd
+    Info (12022): Found design unit 1: RelogioFinal-compRelogioFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd Line: 12
+    Info (12023): Found entity 1: RelogioFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file relogiobasico.vhd
+    Info (12022): Found design unit 1: RelogioBasico-compRelogioBasico File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd Line: 12
+    Info (12023): Found entity 1: RelogioBasico File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxhexa.vhd
+    Info (12022): Found design unit 1: MuxHEXA-compMuxHEXA File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxHEXA.vhd Line: 12
+    Info (12023): Found entity 1: MuxHEXA File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxHEXA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux2_1modo.vhd
+    Info (12022): Found design unit 1: mux2_1Modo-compMux2_1Modo File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_1Modo.vhd Line: 11
+    Info (12023): Found entity 1: mux2_1Modo File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_1Modo.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file minuto.vhd
+    Info (12022): Found design unit 1: Minuto-compMinuto File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Minuto.vhd Line: 15
+    Info (12023): Found entity 1: Minuto File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Minuto.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hora.vhd
+    Info (12022): Found design unit 1: Hora-compHora File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Hora.vhd Line: 14
+    Info (12023): Found entity 1: Hora File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Hora.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fsmrelogio.vhd
+    Info (12022): Found design unit 1: FSMrelogio-compFSMrelogio File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMrelogio.vhd Line: 12
+    Info (12023): Found entity 1: FSMrelogio File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMrelogio.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorrelogio.vhd
+    Info (12022): Found design unit 1: ConversorRelogio-compConversorRelogio File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd Line: 14
+    Info (12023): Found entity 1: ConversorRelogio File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversor2dig.vhd
+    Info (12022): Found design unit 1: Conversor2Dig-compConversor2Dig File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 14
+    Info (12023): Found entity 1: Conversor2Dig File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file compconv7rel.vhd
+    Info (12022): Found design unit 1: Conv7Rel-compConv7Rel File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/compConv7Rel.vhd Line: 20
+    Info (12023): Found entity 1: Conv7Rel File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/compConv7Rel.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegen.vhd
+    Info (12022): Found design unit 1: PulseGen-compPulseGen File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 12
+    Info (12023): Found entity 1: PulseGen File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pulseenable.vhd
+    Info (12022): Found design unit 1: PulseEnable-compPulseEnable File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseEnable.vhd Line: 12
+    Info (12023): Found entity 1: PulseEnable File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseEnable.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: Mux4-compMux4 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4.vhd Line: 11
+    Info (12023): Found entity 1: Mux4 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file divfreq.vhd
+    Info (12022): Found design unit 1: DivFreq-compDivFreq File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DivFreq.vhd Line: 11
+    Info (12023): Found entity 1: DivFreq File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DivFreq.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ttodas.vhd
+    Info (12022): Found design unit 1: tTodas-comptTodas File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd Line: 10
+    Info (12023): Found entity 1: tTodas File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tsol.vhd
+    Info (12022): Found design unit 1: tSol-comptSol File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tSol.vhd Line: 14
+    Info (12023): Found entity 1: tSol File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tSol.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tlua.vhd
+    Info (12022): Found design unit 1: tLua-comptLua File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tLua.vhd Line: 14
+    Info (12023): Found entity 1: tLua File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tLua.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tgel.vhd
+    Info (12022): Found design unit 1: tGel-comptGel File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tGel.vhd Line: 14
+    Info (12023): Found entity 1: tGel File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tGel.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tempsala.vhd
+    Info (12022): Found design unit 1: TempSala-compTempSala File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/TempSala.vhd Line: 14
+    Info (12023): Found entity 1: TempSala File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/TempSala.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tempcontrol.vhd
+    Info (12022): Found design unit 1: tempControl-compTempControl File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tempControl.vhd Line: 11
+    Info (12023): Found entity 1: tempControl File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tempControl.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file outleds.vhd
+    Info (12022): Found design unit 1: outLEDS-compOutLEDS File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/outLEDS.vhd Line: 11
+    Info (12023): Found entity 1: outLEDS File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/outLEDS.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxamb.vhd
+    Info (12022): Found design unit 1: MuxAMB-compMuxAMB File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxAMB.vhd Line: 12
+    Info (12023): Found entity 1: MuxAMB File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/MuxAMB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux4amb.vhd
+    Info (12022): Found design unit 1: Mux4AMB-compMux4AMB File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4AMB.vhd Line: 12
+    Info (12023): Found entity 1: Mux4AMB File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Mux4AMB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux3_3.vhd
+    Info (12022): Found design unit 1: mux3_3-compMux3_3 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux3_3.vhd Line: 11
+    Info (12023): Found entity 1: mux3_3 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux3_3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux2_2.vhd
+    Info (12022): Found design unit 1: mux2_2-compMux2_2 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_2.vhd Line: 11
+    Info (12023): Found entity 1: mux2_2 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/mux2_2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file fsmambiente.vhd
+    Info (12022): Found design unit 1: FSMambiente-compFSMambiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd Line: 13
+    Info (12023): Found entity 1: FSMambiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorambiente.vhd
+    Info (12022): Found design unit 1: ConversorAmbiente-compConversorAmbiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 12
+    Info (12023): Found entity 1: ConversorAmbiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file convambiente.vhd
+    Info (12022): Found design unit 1: ConvAmbiente-compConvAmbiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd Line: 12
+    Info (12023): Found entity 1: ConvAmbiente File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conv7amb.vhd
+    Info (12022): Found design unit 1: Conv7Amb-compConv7Amb File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conv7Amb.vhd Line: 17
+    Info (12023): Found entity 1: Conv7Amb File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conv7Amb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ambientefinal.vhd
+    Info (12022): Found design unit 1: AmbienteFinal-compAmbienteFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 14
+    Info (12023): Found entity 1: AmbienteFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ambientebasico.vhd
+    Info (12022): Found design unit 1: AmbienteBasico-compAmbienteBasico File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd Line: 14
+    Info (12023): Found entity 1: AmbienteBasico File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file romtemp.vhd
+    Info (12022): Found design unit 1: romTemp-compRomTemp File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/romTemp.vhd Line: 10
+    Info (12023): Found entity 1: romTemp File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/romTemp.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DebounceUnit.vhd Line: 17
+    Info (12023): Found entity 1: DebounceUnit File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DebounceUnit.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file radiadorfinal.vhd
+    Info (12022): Found design unit 1: RadiadorFinal-compRadiadorFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 17
+    Info (12023): Found entity 1: RadiadorFinal File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file radiadorfinalteste.vhd
+    Info (12022): Found design unit 1: RadiadorFinalTESTE-comp File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 16
+    Info (12023): Found entity 1: RadiadorFinalTESTE File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 4
+Info (12127): Elaborating entity "RadiadorFinalTESTE" for the top level hierarchy
+Info (12129): Elaborating entity "RadiadorFinal" using architecture "A:compradiadorfinal" for hierarchy "RadiadorFinal:inst" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 19
+Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "RadiadorFinal:inst|DebounceUnit:teclaU" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 24
+Info (12129): Elaborating entity "PulseGen" using architecture "A:comppulsegen" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 64
+Info (12129): Elaborating entity "DivFreq" using architecture "A:compdivfreq" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:Normal1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 17
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:Normal2" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 22
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel01" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 28
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel10" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 34
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|PulseEnable:acel11" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 40
+Info (12129): Elaborating entity "Mux4" using architecture "A:compmux4" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|Mux4:saida1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 46
+Info (12129): Elaborating entity "DivFreq" using architecture "A:compdivfreq" for hierarchy "RadiadorFinal:inst|PulseGen:Pulsos|DivFreq:saida2" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/PulseGen.vhd Line: 54
+Info (12129): Elaborating entity "RelogioFinal" using architecture "A:comprelogiofinal" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 70
+Info (12129): Elaborating entity "FSMrelogio" using architecture "A:compfsmrelogio" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|FSMrelogio:FSMrel" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd Line: 22
+Info (12129): Elaborating entity "RelogioBasico" using architecture "A:comprelogiobasico" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd Line: 33
+Info (12129): Elaborating entity "mux2_1Modo" using architecture "A:compmux2_1modo" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|mux2_1Modo:muxMin" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd Line: 19
+Info (12129): Elaborating entity "Minuto" using architecture "A:compminuto" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Minuto:Minutos" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd Line: 25
+Info (12129): Elaborating entity "Hora" using architecture "A:comphora" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|RelogioBasico:relBas|Hora:Horas" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioBasico.vhd Line: 38
+Info (12129): Elaborating entity "ConversorRelogio" using architecture "A:compconversorrelogio" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RelogioFinal.vhd Line: 45
+Info (12129): Elaborating entity "MuxHEXA" using architecture "A:compmuxhexa" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|MuxHEXA:pulsos" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd Line: 20
+Info (12129): Elaborating entity "Conversor2Dig" using architecture "A:compconversor2dig" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd Line: 31
+Info (12129): Elaborating entity "Conv7Rel" using architecture "A:compconv7rel" for hierarchy "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conv7Rel:convHx" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorRelogio.vhd Line: 39
+Info (12129): Elaborating entity "AmbienteFinal" using architecture "A:compambientefinal" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinal.vhd Line: 83
+Info (12129): Elaborating entity "romTemp" using architecture "A:compromtemp" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|romTemp:ROM" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 25
+Info (12129): Elaborating entity "FSMambiente" using architecture "A:compfsmambiente" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at FSMambiente.vhd(28): inferring latch(es) for signal or variable "ud", which holds its previous value in one or more paths through the process File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd Line: 28
+Info (10041): Inferred latch for "ud" at FSMambiente.vhd(28) File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd Line: 28
+Info (12129): Elaborating entity "tTodas" using architecture "A:compttodas" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 42
+Info (12129): Elaborating entity "tGel" using architecture "A:comptgel" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tGel:GEL" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd Line: 13
+Info (12129): Elaborating entity "tLua" using architecture "A:comptlua" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tLua:LUA" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd Line: 19
+Info (12129): Elaborating entity "tSol" using architecture "A:comptsol" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|tTodas:tRef|tSol:SOL" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/tTodas.vhd Line: 25
+Info (12129): Elaborating entity "AmbienteBasico" using architecture "A:compambientebasico" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 52
+Info (12129): Elaborating entity "MuxAMB" using architecture "A:compmuxamb" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|MuxAMB:selecao" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd Line: 21
+Info (12129): Elaborating entity "TempSala" using architecture "A:comptempsala" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|TempSala:cont9" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd Line: 28
+Info (12129): Elaborating entity "tempControl" using architecture "A:comptempcontrol" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|AmbienteBasico:tSelect|tempControl:control" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteBasico.vhd Line: 34
+Info (12129): Elaborating entity "ConvAmbiente" using architecture "A:compconvambiente" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 63
+Info (12129): Elaborating entity "Mux4AMB" using architecture "A:compmux4amb" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Mux4AMB:inRefConv" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd Line: 26
+Info (12129): Elaborating entity "ConversorAmbiente" using architecture "A:compconversorambiente" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd Line: 35
+Info (12129): Elaborating entity "Conv7Amb" using architecture "A:compconv7amb" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|Conv7Amb:conv7seg" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConvAmbiente.vhd Line: 41
+Info (12129): Elaborating entity "outLEDS" using architecture "A:compoutleds" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/AmbienteFinal.vhd Line: 75
+Info (12129): Elaborating entity "mux2_2" using architecture "A:compmux2_2" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux2_2:mux1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/outLEDS.vhd Line: 16
+Info (12129): Elaborating entity "mux3_3" using architecture "A:compmux3_3" for hierarchy "RadiadorFinal:inst|AmbienteFinal:Ambiente|outLEDS:LEDs|mux3_3:mux2" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/outLEDS.vhd Line: 22
+Info (278001): Inferred 8 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|Mod0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 22
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|Div0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|Mod1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|Div1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|Div1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 20
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|Div0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|Mod1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|Mod0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 18
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 22
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod0" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 22
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lcm.tdf
+    Info (12023): Found entity 1: lpm_divide_lcm File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_lcm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/sign_div_unsign_anh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8af.tdf
+    Info (12023): Found entity 1: alt_u_div_8af File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_8af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 23
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div0" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_p0p.tdf
+    Info (12023): Found entity 1: lpm_divide_p0p File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_p0p.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/abs_divider_kbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_67f.tdf
+    Info (12023): Found entity 1: alt_u_div_67f File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_67f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_2v9.tdf
+    Info (12023): Found entity 1: lpm_abs_2v9 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_2v9.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_i0a.tdf
+    Info (12023): Found entity 1: lpm_abs_i0a File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_i0a.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 25
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Mod1" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 25
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 26
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|RelogioFinal:Relogio|ConversorRelogio:convRel|Conversor2Dig:conv2D|lpm_divide:Div1" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/Conversor2Dig.vhd Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 20
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 20
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_s0p.tdf
+    Info (12023): Found entity 1: lpm_divide_s0p File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_divide_s0p.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
+    Info (12023): Found entity 1: abs_divider_nbg File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/abs_divider_nbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c7f.tdf
+    Info (12023): Found entity 1: alt_u_div_c7f File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_c7f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_5v9.tdf
+    Info (12023): Found entity 1: lpm_abs_5v9 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/lpm_abs_5v9.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div0" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 19
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 18
+Info (12133): Instantiated megafunction "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod0" with the following parameter: File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/ConversorAmbiente.vhd Line: 18
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning (13012): Latch RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|ud has unsafe behavior File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/FSMambiente.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RadiadorFinal:inst|DebounceUnit:teclaU|s_pulsedOut File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/DebounceUnit.vhd Line: 40
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 9
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/RadiadorFinalTESTE.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Div1|lpm_divide_s0p:auto_generated|abs_divider_nbg:divider|alt_u_div_c7f:divider|add_sub_29_result_int[1]~16" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/02ShellFinal/teste1/db/alt_u_div_c7f.tdf Line: 137
+    Info (17048): Logic cell "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|op_25~0"
+    Info (17048): Logic cell "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|op_23~26"
+    Info (17048): Logic cell "RadiadorFinal:inst|AmbienteFinal:Ambiente|ConvAmbiente:conv|ConversorAmbiente:conv3Dig|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider|op_24~30"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1517 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 76 output pins
+    Info (21061): Implemented 1434 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Fri Jun 02 13:00:49 2023
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
+
+

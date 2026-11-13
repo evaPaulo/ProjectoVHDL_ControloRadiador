@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity ConvAmbiente is
+
+	port (enHex						: in std_logic;
+			tempIn					: in std_logic_vector(8 downto 0);
+			temp2, temp1, temp0	: out std_logic_vector(6 downto 0));
+end ConvAmbiente;
+
+architecture compConvAmbiente	of ConvAmbiente is
+
+signal s_t2, s_t1, s_t0 : std_logic_vector (3 downto 0);
+
+begin
+		
+	conv3Dig:	entity work.ConversorAmbiente(compConversorAmbiente)
+					port map (tempIn	=> tempIn,
+								 t10		=> s_t2,
+								 t1		=> s_t1,
+								 t01		=> s_t0);
+						
+	conv7seg:	entity work.Conv7Amb(compConv7Amb)
+					port map (en			=> enHex,
+								 inPort0		=> s_t0,
+								 inPort1		=> s_t1,
+								 inPort2		=> s_t2,
+								 outPort0	=> temp0,
+								 outPort1	=> temp1,
+								 outPort2	=> temp2);
+								 
+end compConvAmbiente;								 

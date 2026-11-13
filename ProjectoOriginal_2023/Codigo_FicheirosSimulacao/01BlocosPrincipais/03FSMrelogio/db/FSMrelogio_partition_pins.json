@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "modo",
+					"strict" : false
+				},
+				{
+					"name" : "ud",
+					"strict" : false
+				},
+				{
+					"name" : "mmH",
+					"strict" : false
+				},
+				{
+					"name" : "enH",
+					"strict" : false
+				},
+				{
+					"name" : "enM",
+					"strict" : false
+				},
+				{
+					"name" : "up",
+					"strict" : false
+				},
+				{
+					"name" : "down",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "tecla",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

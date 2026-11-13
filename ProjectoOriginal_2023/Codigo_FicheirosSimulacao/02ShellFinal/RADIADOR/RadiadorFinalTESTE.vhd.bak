@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity RadiadorFinalTESTE is
+	
+	port (CLOCK_50		: in std_logic;
+			SW				: in std_logic_vector(1 downto 0);
+			KEY			: in std_logic_vector(3 downto 0);
+			acel					: in std_logic_vector(1 downto 0);
+			
+			LedG, LedL, LedS	: out std_logic;
+			gDzn, gUni, gDcm	: out std_logic_vector(6 downto 0);
+			hD, hU, mD, mU		: out std_logic_vector(6 downto 0));
+			
+end RadiadorFinalTESTE;

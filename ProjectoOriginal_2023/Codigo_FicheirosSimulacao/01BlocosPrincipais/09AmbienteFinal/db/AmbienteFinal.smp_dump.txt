@@ -1,0 +1,7 @@
+
+State Machine - |AmbienteFinal|FSMambiente:FSM|pS
+Name pS.SOL pS.LUA pS.GEL pS.NORMAL 
+pS.NORMAL 0 0 0 0 
+pS.GEL 0 0 1 1 
+pS.LUA 0 1 0 1 
+pS.SOL 1 0 0 1 

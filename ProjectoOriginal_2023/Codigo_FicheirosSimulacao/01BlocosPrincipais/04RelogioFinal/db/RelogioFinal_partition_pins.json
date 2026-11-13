@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "horaRom[0]",
+					"strict" : false
+				},
+				{
+					"name" : "horaRom[1]",
+					"strict" : false
+				},
+				{
+					"name" : "horaRom[2]",
+					"strict" : false
+				},
+				{
+					"name" : "horaRom[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horaRom[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "divF",
+					"strict" : false
+				},
+				{
+					"name" : "up",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				},
+				{
+					"name" : "dw",
+					"strict" : false
+				},
+				{
+					"name" : "tS",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

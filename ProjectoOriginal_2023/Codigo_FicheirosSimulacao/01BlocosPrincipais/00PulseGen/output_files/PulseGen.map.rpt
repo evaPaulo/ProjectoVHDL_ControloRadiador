@@ -1,0 +1,458 @@
+Analysis & Synthesis report for PulseGen
+Thu Jun 01 10:35:02 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: DivFreq:Normal1
+ 11. Parameter Settings for User Entity Instance: PulseEnable:Normal2
+ 12. Parameter Settings for User Entity Instance: PulseEnable:acel01
+ 13. Parameter Settings for User Entity Instance: PulseEnable:acel10
+ 14. Parameter Settings for User Entity Instance: PulseEnable:acel11
+ 15. Parameter Settings for User Entity Instance: DivFreq:saida2
+ 16. Port Connectivity Checks: "PulseEnable:acel11"
+ 17. Port Connectivity Checks: "PulseEnable:acel10"
+ 18. Port Connectivity Checks: "PulseEnable:acel01"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 01 10:35:02 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; PulseGen                                    ;
+; Top-level Entity Name              ; PulseGen                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 256                                         ;
+;     Total combinational functions  ; 256                                         ;
+;     Dedicated logic registers      ; 158                                         ;
+; Total registers                    ; 158                                         ;
+; Total pins                         ; 5                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; PulseGen           ; PulseGen           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+; PulseEnable.vhd                  ; yes             ; User VHDL File  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseEnable.vhd ;         ;
+; DivFreq.vhd                      ; yes             ; User VHDL File  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/DivFreq.vhd     ;         ;
+; Mux4.vhd                         ; yes             ; User VHDL File  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/Mux4.vhd        ;         ;
+; PulseGen.vhd                     ; yes             ; User VHDL File  ; C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd    ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 256           ;
+;                                             ;               ;
+; Total combinational functions               ; 256           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 54            ;
+;     -- 3 input functions                    ; 6             ;
+;     -- <=2 input functions                  ; 196           ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 108           ;
+;     -- arithmetic mode                      ; 148           ;
+;                                             ;               ;
+; Total registers                             ; 158           ;
+;     -- Dedicated logic registers            ; 158           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 5             ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; clockIn~input ;
+; Maximum fan-out                             ; 158           ;
+; Total fan-out                               ; 976           ;
+; Average fan-out                             ; 2.30          ;
++---------------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+; |PulseGen                  ; 256 (1)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |PulseGen                     ; PulseGen    ; work         ;
+;    |DivFreq:Normal1|       ; 42 (42)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|DivFreq:Normal1     ; DivFreq     ; work         ;
+;    |DivFreq:saida2|        ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|DivFreq:saida2      ; DivFreq     ; work         ;
+;    |Mux4:saida1|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|Mux4:saida1         ; Mux4        ; work         ;
+;    |PulseEnable:Normal2|   ; 53 (53)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|PulseEnable:Normal2 ; PulseEnable ; work         ;
+;    |PulseEnable:acel01|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|PulseEnable:acel01  ; PulseEnable ; work         ;
+;    |PulseEnable:acel10|    ; 48 (48)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|PulseEnable:acel10  ; PulseEnable ; work         ;
+;    |PulseEnable:acel11|    ; 53 (53)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PulseGen|PulseEnable:acel11  ; PulseEnable ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; PulseEnable:acel01|s_divCounter[30]    ; Merged with DivFreq:saida2|s_divCounter[30] ;
+; PulseEnable:acel01|s_divCounter[29]    ; Merged with DivFreq:saida2|s_divCounter[29] ;
+; PulseEnable:acel01|s_divCounter[28]    ; Merged with DivFreq:saida2|s_divCounter[28] ;
+; PulseEnable:acel01|s_divCounter[27]    ; Merged with DivFreq:saida2|s_divCounter[27] ;
+; PulseEnable:acel01|s_divCounter[26]    ; Merged with DivFreq:saida2|s_divCounter[26] ;
+; PulseEnable:acel01|s_divCounter[25]    ; Merged with DivFreq:saida2|s_divCounter[25] ;
+; PulseEnable:acel01|s_divCounter[23]    ; Merged with DivFreq:saida2|s_divCounter[23] ;
+; PulseEnable:acel01|s_divCounter[17]    ; Merged with DivFreq:saida2|s_divCounter[17] ;
+; PulseEnable:acel01|s_divCounter[15]    ; Merged with DivFreq:saida2|s_divCounter[15] ;
+; PulseEnable:acel01|s_divCounter[10]    ; Merged with DivFreq:saida2|s_divCounter[10] ;
+; PulseEnable:acel01|s_divCounter[9]     ; Merged with DivFreq:saida2|s_divCounter[9]  ;
+; PulseEnable:acel01|s_divCounter[8]     ; Merged with DivFreq:saida2|s_divCounter[8]  ;
+; PulseEnable:acel01|s_divCounter[7]     ; Merged with DivFreq:saida2|s_divCounter[7]  ;
+; PulseEnable:acel01|s_divCounter[6]     ; Merged with DivFreq:saida2|s_divCounter[6]  ;
+; PulseEnable:acel01|s_divCounter[24]    ; Merged with DivFreq:saida2|s_divCounter[24] ;
+; PulseEnable:acel01|s_divCounter[22]    ; Merged with DivFreq:saida2|s_divCounter[22] ;
+; PulseEnable:acel01|s_divCounter[21]    ; Merged with DivFreq:saida2|s_divCounter[21] ;
+; PulseEnable:acel01|s_divCounter[20]    ; Merged with DivFreq:saida2|s_divCounter[20] ;
+; PulseEnable:acel01|s_divCounter[19]    ; Merged with DivFreq:saida2|s_divCounter[19] ;
+; PulseEnable:acel01|s_divCounter[18]    ; Merged with DivFreq:saida2|s_divCounter[18] ;
+; PulseEnable:acel01|s_divCounter[16]    ; Merged with DivFreq:saida2|s_divCounter[16] ;
+; PulseEnable:acel01|s_divCounter[14]    ; Merged with DivFreq:saida2|s_divCounter[14] ;
+; PulseEnable:acel01|s_divCounter[13]    ; Merged with DivFreq:saida2|s_divCounter[13] ;
+; PulseEnable:acel01|s_divCounter[12]    ; Merged with DivFreq:saida2|s_divCounter[12] ;
+; PulseEnable:acel01|s_divCounter[11]    ; Merged with DivFreq:saida2|s_divCounter[11] ;
+; PulseEnable:acel01|s_divCounter[5]     ; Merged with DivFreq:saida2|s_divCounter[5]  ;
+; PulseEnable:acel01|s_divCounter[4]     ; Merged with DivFreq:saida2|s_divCounter[4]  ;
+; PulseEnable:acel01|s_divCounter[3]     ; Merged with DivFreq:saida2|s_divCounter[3]  ;
+; PulseEnable:acel01|s_divCounter[2]     ; Merged with DivFreq:saida2|s_divCounter[2]  ;
+; PulseEnable:acel01|s_divCounter[1]     ; Merged with DivFreq:saida2|s_divCounter[1]  ;
+; PulseEnable:acel01|s_divCounter[0]     ; Merged with DivFreq:saida2|s_divCounter[0]  ;
+; DivFreq:Normal1|s_divCounter[0]        ; Merged with DivFreq:saida2|s_divCounter[0]  ;
+; PulseEnable:acel10|s_divCounter[0]     ; Merged with DivFreq:saida2|s_divCounter[0]  ;
+; PulseEnable:acel10|s_divCounter[1]     ; Merged with DivFreq:saida2|s_divCounter[1]  ;
+; Total Number of Removed Registers = 34 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 158   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivFreq:Normal1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; contagem       ; 2     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseEnable:Normal2 ;
++----------------+------------+------------------------------------+
+; Parameter Name ; Value      ; Type                               ;
++----------------+------------+------------------------------------+
+; contagem       ; 1500000000 ; Signed Integer                     ;
++----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseEnable:acel01 ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; contagem       ; 50000000 ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseEnable:acel10 ;
++----------------+---------+--------------------------------------+
+; Parameter Name ; Value   ; Type                                 ;
++----------------+---------+--------------------------------------+
+; contagem       ; 5000000 ; Signed Integer                       ;
++----------------+---------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseEnable:acel11 ;
++----------------+--------+---------------------------------------+
+; Parameter Name ; Value  ; Type                                  ;
++----------------+--------+---------------------------------------+
+; contagem       ; 833333 ; Signed Integer                        ;
++----------------+--------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivFreq:saida2 ;
++----------------+----------+---------------------------------+
+; Parameter Name ; Value    ; Type                            ;
++----------------+----------+---------------------------------+
+; contagem       ; 50000000 ; Signed Integer                  ;
++----------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "PulseEnable:acel11" ;
++--------+-------+----------+--------------------+
+; Port   ; Type  ; Severity ; Details            ;
++--------+-------+----------+--------------------+
+; enable ; Input ; Info     ; Stuck at VCC       ;
++--------+-------+----------+--------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "PulseEnable:acel10" ;
++--------+-------+----------+--------------------+
+; Port   ; Type  ; Severity ; Details            ;
++--------+-------+----------+--------------------+
+; enable ; Input ; Info     ; Stuck at VCC       ;
++--------+-------+----------+--------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "PulseEnable:acel01" ;
++--------+-------+----------+--------------------+
+; Port   ; Type  ; Severity ; Details            ;
++--------+-------+----------+--------------------+
+; enable ; Input ; Info     ; Stuck at VCC       ;
++--------+-------+----------+--------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 5                           ;
+; cycloneiii_ff         ; 158                         ;
+;     ENA               ; 32                          ;
+;     plain             ; 126                         ;
+; cycloneiii_lcell_comb ; 256                         ;
+;     arith             ; 148                         ;
+;         2 data inputs ; 146                         ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 108                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 54                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Jun 01 10:34:46 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PulseGen -c PulseGen
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pulseenable.vhd
+    Info (12022): Found design unit 1: PulseEnable-compPulseEnable File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseEnable.vhd Line: 12
+    Info (12023): Found entity 1: PulseEnable File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseEnable.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divfreq.vhd
+    Info (12022): Found design unit 1: DivFreq-compDivFreq File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/DivFreq.vhd Line: 11
+    Info (12023): Found entity 1: DivFreq File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/DivFreq.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: Mux4-compMux4 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/Mux4.vhd Line: 11
+    Info (12023): Found entity 1: Mux4 File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/Mux4.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegen.vhd
+    Info (12022): Found design unit 1: PulseGen-compPulseGen File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 12
+    Info (12023): Found entity 1: PulseGen File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 4
+Info (12127): Elaborating entity "PulseGen" for the top level hierarchy
+Info (12129): Elaborating entity "DivFreq" using architecture "A:compdivfreq" for hierarchy "DivFreq:Normal1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 17
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "PulseEnable:Normal2" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 22
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "PulseEnable:acel01" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 28
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "PulseEnable:acel10" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 34
+Info (12129): Elaborating entity "PulseEnable" using architecture "A:comppulseenable" for hierarchy "PulseEnable:acel11" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 40
+Info (12129): Elaborating entity "Mux4" using architecture "A:compmux4" for hierarchy "Mux4:saida1" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 46
+Info (12129): Elaborating entity "DivFreq" using architecture "A:compdivfreq" for hierarchy "DivFreq:saida2" File: C:/Users/evapa/ISD/00LSD/00ProjetoFinal/01BlocosPrincipais/00PulseGen/PulseGen.vhd Line: 54
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 260 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Thu Jun 01 10:35:02 2023
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:08
+
+

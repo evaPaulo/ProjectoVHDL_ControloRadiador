@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "radiador",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tAmb[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tSel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tSel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

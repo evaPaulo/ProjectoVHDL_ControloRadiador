@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "horaD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "horaD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "horaU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minuD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minuU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "horaIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "horaIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horaIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "horaIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pulseIn",
+					"strict" : false
+				},
+				{
+					"name" : "mmH",
+					"strict" : false
+				},
+				{
+					"name" : "modo",
+					"strict" : false
+				},
+				{
+					"name" : "horaIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minuIn[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

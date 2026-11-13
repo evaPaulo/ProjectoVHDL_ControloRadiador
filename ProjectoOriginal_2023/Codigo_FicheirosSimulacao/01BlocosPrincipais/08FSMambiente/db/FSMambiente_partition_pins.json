@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "stOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "stOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "modo",
+					"strict" : false
+				},
+				{
+					"name" : "ud",
+					"strict" : false
+				},
+				{
+					"name" : "eG",
+					"strict" : false
+				},
+				{
+					"name" : "eL",
+					"strict" : false
+				},
+				{
+					"name" : "eS",
+					"strict" : false
+				},
+				{
+					"name" : "up",
+					"strict" : false
+				},
+				{
+					"name" : "down",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "tecla",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

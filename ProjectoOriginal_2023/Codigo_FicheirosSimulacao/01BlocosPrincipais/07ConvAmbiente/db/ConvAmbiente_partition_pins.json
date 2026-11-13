@@ -1,0 +1,253 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "temp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "temp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "temp1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "temp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[8]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[8]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[8]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[7]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				},
+				{
+					"name" : "modo",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tGel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tLua[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tNormal[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tSol[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

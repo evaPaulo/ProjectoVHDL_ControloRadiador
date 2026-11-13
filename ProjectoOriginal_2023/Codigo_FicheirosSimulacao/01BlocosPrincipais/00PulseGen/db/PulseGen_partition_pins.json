@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pulseHex",
+					"strict" : false
+				},
+				{
+					"name" : "pulseOut",
+					"strict" : false
+				},
+				{
+					"name" : "acel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "acel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clockIn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

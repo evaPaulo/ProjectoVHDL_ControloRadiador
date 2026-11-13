@@ -1,0 +1,6 @@
+
+State Machine - |Teste1|RelogioFinal:relogio|FSMrelogio:FSMrel|pS
+Name pS.HORAS pS.MINUTOS pS.NORMAL 
+pS.NORMAL 0 0 0 
+pS.MINUTOS 0 1 1 
+pS.HORAS 1 0 1 

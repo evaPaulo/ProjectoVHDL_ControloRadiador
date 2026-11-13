@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -5.607
+TNS   : -909.566
+
+Type  : Slow 1200mV 85C Model Setup 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : -3.163
+TNS   : -3.163
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 2.814
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -407.775
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -4.972
+TNS   : -801.235
+
+Type  : Slow 1200mV 0C Model Setup 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : -2.889
+TNS   : -2.889
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 2.665
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -407.775
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.190
+TNS   : -290.274
+
+Type  : Fast 1200mV 0C Model Setup 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : -1.414
+TNS   : -1.414
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 1.636
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -337.208
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RadiadorFinal:inst|AmbienteFinal:Ambiente|FSMambiente:FSM|pS.NORMAL'
+Slack : 0.359
+TNS   : 0.000
+
+------------------------------------------------------------

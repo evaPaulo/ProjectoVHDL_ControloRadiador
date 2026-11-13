@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "radiador",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tDzn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tUni[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tDcm[6]",
+					"strict" : false
+				},
+				{
+					"name" : "modoLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "modoLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "modoLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divF",
+					"strict" : false
+				},
+				{
+					"name" : "horaROM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horaROM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "horaROM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "horaROM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "horaROM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "up",
+					"strict" : false
+				},
+				{
+					"name" : "dw",
+					"strict" : false
+				},
+				{
+					"name" : "tP",
+					"strict" : false
+				},
+				{
+					"name" : "pulso",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
