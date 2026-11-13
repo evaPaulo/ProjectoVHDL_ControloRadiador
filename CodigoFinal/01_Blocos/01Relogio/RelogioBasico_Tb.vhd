@@ -82,7 +82,7 @@ stim_proc:process
 				s_enH	<= '1';
 				
 				wait for 40 ns;
-				wait;
+		
 			end process;
 end compRelogioBasico_Tb;
 
