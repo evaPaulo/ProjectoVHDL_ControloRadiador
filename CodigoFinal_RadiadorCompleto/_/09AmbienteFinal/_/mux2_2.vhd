@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY mux2_2 IS
+	PORT (
+		i0, i1 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		sel : IN STD_LOGIC;
+		yout : OUT STD_LOGIC_VECTOR(1 DOWNTO 0));
+
+END mux2_2;
+
+ARCHITECTURE compMux2_2 OF mux2_2 IS
+BEGIN
+
+	yout <= i1 WHEN(sel = '1') ELSE
+		i0;
+
+END compMux2_2;

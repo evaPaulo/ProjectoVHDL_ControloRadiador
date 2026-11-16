@@ -1,0 +1,46 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY RadiadorFinalTESTE IS
+
+	PORT (
+		CLOCK_50 : IN STD_LOGIC;
+		SW : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
+		LEDG : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+		HEX0, HEX1, HEX2, HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		HEX7, HEX6, HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+
+END RadiadorFinalTESTE;
+
+ARCHITECTURE comp OF RadiadorFinalTESTE IS
+BEGIN
+
+	inst : ENTITY work.RadiadorFinal(compRadiadorFinal)
+		PORT MAP(
+			clk => CLOCK_50,
+			tUp => KEY(1),
+			tDw => KEY(0),
+			tS => KEY(2),
+			tP => KEY(3),
+			acel => SW(1 DOWNTO 0),
+
+			Radiador => LEDR(0),
+			LedG => LEDG(0),
+			LedL => LEDG(3),
+			LedS => LEDG(6),
+			gDzn => HEX7(6 DOWNTO 0),
+			gUni => HEX6(6 DOWNTO 0),
+			gDcm => HEX5(6 DOWNTO 0),
+			hD => HEX3(6 DOWNTO 0),
+			hU => HEX2(6 DOWNTO 0),
+			mD => HEX1(6 DOWNTO 0),
+			mU => HEX0(6 DOWNTO 0));
+
+	LEDR(17 DOWNTO 1) <= (OTHERS => '0');
+	LEDG(2 DOWNTO 1) <= "00";
+	LEDG(5 DOWNTO 4) <= "00";
+	LEDG(8 DOWNTO 7) <= "00";
+	
+END comp;

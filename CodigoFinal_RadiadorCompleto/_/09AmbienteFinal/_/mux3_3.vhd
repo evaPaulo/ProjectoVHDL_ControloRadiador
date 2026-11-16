@@ -1,0 +1,19 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY mux3_3 IS
+	PORT (
+		i0, i1, i2 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+		sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		yout : OUT STD_LOGIC_VECTOR(2 DOWNTO 0));
+
+END mux3_3;
+
+ARCHITECTURE compMux3_3 OF mux3_3 IS
+BEGIN
+
+	yout <= i0 WHEN(sel = "01") ELSE
+		i1 WHEN(sel = "10") ELSE
+		i2;
+
+END compMux3_3;

@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+ENTITY Mux4 IS
+	PORT (
+		i0, i1, i2, i3 : IN STD_LOGIC;
+		sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		yout : OUT STD_LOGIC);
+END Mux4;
+
+ARCHITECTURE compMux4 OF Mux4 IS
+BEGIN
+
+	yout <= i0 WHEN (sel = "00") ELSE
+		i1 WHEN (sel = "01") ELSE
+		i2 WHEN (sel = "10") ELSE
+		i3;
+
+END compMux4;
